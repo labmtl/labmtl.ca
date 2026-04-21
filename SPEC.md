@@ -13,6 +13,7 @@ Liste de projets que nous supportons en fournissant technologies, conseils et cr
 * [cv.coderbunker.ca](https://cv.coderbunker.ca/) : Curriculum Vitae Coderbunker Canada
 * [quartierneuf.ca](https://quartierneuf.ca/) : initiative citoyenne pour la propreté des quartiers
 * [labcitoyen.org](https://labcitoyen.org/) : laboratoire citoyen (initiatives technologies et sciences citoyennes)
+* [restodanny.com](https://restodanny.com/) : Fonds de famille Danny Ng
 
 ## partenaire
 
