@@ -1,10 +1,10 @@
 # labmtl
 
-Notre laboratoire Montréalai
+Notre laboratoire Montréalais pour des projets d'initiatives citoyennes, de communautés et d'entraide.
 
 ## Projets signés Coderbunker Canada
 
-Liste de projets que nous supportons en fournissant technologies, conseils et croissances.
+Liste de projets que nous supportons en fournissant technologies, conseils et croissance.
 
 
 * [cohabitat.cc](https://cohabitat.cc/) : Cohabitat Club Cyclistes
