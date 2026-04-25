@@ -1,0 +1,16 @@
+{
+  "name": "labmtl.ca",
+  "version": "1.0.0",
+  "description": "Landing page for labmtl.ca",
+  "main": "index.html",
+  "scripts": {
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
+    "test": "playwright test",
+    "serve": "python3 -m http.server 8081"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "prettier": "^3.0.0"
+  }
+}
