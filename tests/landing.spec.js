@@ -21,8 +21,21 @@ test("projects and partners sections are present", async ({ page }) => {
   await expect(partners).toHaveCount(3);
 });
 
-test("portfolio widget is integrated", async ({ page }) => {
+test("portfolio widget loads images correctly", async ({ page }) => {
   const slideshow = page.locator(".labmtl-slideshow");
   await expect(slideshow).toBeVisible();
-  await expect(slideshow).toHaveAttribute("data-manifest", /manifest.json/);
+
+  // Wait for at least one image to be injected into the slideshow
+  const firstImage = slideshow.locator(".labmtl-slide img").first();
+  await expect(firstImage).toBeVisible({ timeout: 15000 });
+
+  // Check if the image is actually loaded (not broken)
+  const isLoaded = await firstImage.evaluate(
+    (img) => img.complete && img.naturalWidth > 0,
+  );
+  expect(isLoaded).toBe(true);
+
+  // Verify the image source points to the correct CDN
+  const src = await firstImage.getAttribute("src");
+  expect(src).toMatch(/raw\.githack\.com\/labmtl\/assets/);
 });
