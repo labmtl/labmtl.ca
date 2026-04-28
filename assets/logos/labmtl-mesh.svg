@@ -1,7 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
-  <!-- Arrière-plan blanc -->
-  <rect width="100" height="100" fill="#ffffff" />
-
   <!-- Forme du point de localisation (Map Pin) Bleu Montréal -->
   <path d="M 50 95 L 23 62.3 A 35 35 0 1 1 77 62.3 Z" fill="#0055A4" />
 
