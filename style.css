@@ -261,6 +261,12 @@ section {
   transition: all 0.3s;
 }
 
+.partner-logo-placeholder img {
+  max-width: 60px;
+  max-height: 60px;
+  object-fit: contain;
+}
+
 .partner-item:hover .partner-logo-placeholder {
   border-color: var(--primary);
   transform: scale(1.05);
