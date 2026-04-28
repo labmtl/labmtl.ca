@@ -29,11 +29,13 @@ test("portfolio widget loads images correctly", async ({ page }) => {
   const firstImage = slideshow.locator(".labmtl-slide img").first();
   await expect(firstImage).toBeVisible({ timeout: 15000 });
 
-  // Check if the image is actually loaded (not broken)
-  const isLoaded = await firstImage.evaluate(
-    (img) => img.complete && img.naturalWidth > 0,
-  );
-  expect(isLoaded).toBe(true);
+  // Check if the image is actually loaded (not broken), with retries
+  await expect(async () => {
+    const isLoaded = await firstImage.evaluate(
+      (img) => img.complete && img.naturalWidth > 0,
+    );
+    expect(isLoaded).toBe(true);
+  }).toPass({ timeout: 15000 });
 
   // Verify the image source points to the correct CDN
   const src = await firstImage.getAttribute("src");
@@ -47,7 +49,7 @@ test("partner logos load correctly as img tags", async ({ page }) => {
   const expectedLogos = [
     "assets/logos/coderbunker.svg",
     "assets/logos/ovhcloud.svg",
-    "assets/logos/cooperathon.svg",
+    "assets/cooperathon/Cooperathon_sigle_infini_mention_2026_BLANC.png",
   ];
 
   for (let i = 0; i < 3; i++) {
