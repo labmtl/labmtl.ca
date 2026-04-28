@@ -39,3 +39,28 @@ test("portfolio widget loads images correctly", async ({ page }) => {
   const src = await firstImage.getAttribute("src");
   expect(src).toMatch(/raw\.githack\.com\/labmtl\/assets/);
 });
+
+test("partner logos load correctly as img tags", async ({ page }) => {
+  const logos = page.locator(".partner-logo-placeholder img");
+  await expect(logos).toHaveCount(3);
+
+  const expectedLogos = [
+    "assets/logos/coderbunker.svg",
+    "assets/logos/ovhcloud.svg",
+    "assets/logos/cooperathon.svg",
+  ];
+
+  for (let i = 0; i < 3; i++) {
+    const logo = logos.nth(i);
+    await expect(logo).toBeVisible();
+
+    const src = await logo.getAttribute("src");
+    expect(src).toBe(expectedLogos[i]);
+
+    // Check if the SVG file is accessible and loaded
+    const isLoaded = await logo.evaluate(
+      (img) => img.complete && img.naturalWidth > 0,
+    );
+    expect(isLoaded).toBe(true);
+  }
+});
