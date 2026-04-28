@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Arrière-plan blanc -->
+  <rect width="100" height="100" fill="#ffffff" />
+
+  <!-- Forme du point de localisation (Map Pin) Bleu Montréal -->
+  <path d="M 50 95 L 23 62.3 A 35 35 0 1 1 77 62.3 Z" fill="#0055A4" />
+
+  <!-- Structure du Mesh (Réseau de l'Agent IA) formant le M -->
+  <g stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Tracé principal du M -->
+    <path d="M 32 58 L 32 30 L 50 48 L 68 30 L 68 58" fill="none" />
+    
+    <!-- Connexions transversales pour l'effet "Mesh" -->
+    <line x1="41" y1="39" x2="50" y2="48" />
+    <line x1="59" y1="39" x2="50" y2="48" />
+  </g>
+
+  <!-- Nœuds du Mesh avec les couleurs de Montréal -->
+  <!-- Rouge (Rose - Angleterre) -->
+  <circle cx="32" cy="30" r="3.5" fill="#EF4135" stroke="#ffffff" stroke-width="1" />
+  <circle cx="68" cy="30" r="3.5" fill="#EF4135" stroke="#ffffff" stroke-width="1" />
+  
+  <!-- Vert (Trèfle - Irlande) -->
+  <circle cx="32" cy="58" r="3.5" fill="#00A651" stroke="#ffffff" stroke-width="1" />
+  <circle cx="68" cy="58" r="3.5" fill="#00A651" stroke="#ffffff" stroke-width="1" />
+  
+  <!-- Blanc/Bleu (Chardon/Lys - Écosse/France) - Point central de l'IA -->
+  <circle cx="50" cy="48" r="4.5" fill="#ffffff" />
+  <circle cx="50" cy="48" r="2" fill="#0055A4" />
+
+  <!-- Petits points de données supplémentaires -->
+  <circle cx="41" cy="39" r="1.5" fill="#ffffff" />
+  <circle cx="59" cy="39" r="1.5" fill="#ffffff" />
+  <circle cx="32" cy="44" r="1.5" fill="#ffffff" />
+  <circle cx="68" cy="44" r="1.5" fill="#ffffff" />
+</svg>
