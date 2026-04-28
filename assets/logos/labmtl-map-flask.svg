@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <!-- Masque pour évider le centre du point de localisation -->
+    <mask id="hollow-flask">
+      <!-- Le fond blanc du masque conserve la forme principale intacte -->
+      <rect width="100" height="100" fill="white" />
+      
+      <!-- La forme du flacon en noir perce le trou -->
+      <!-- Le 'stroke' épais et arrondi génère les coins doux du flacon -->
+      <path d="M 45 23 L 55 23 L 55 36 L 65 57 L 35 57 L 45 36 Z" 
+            fill="black" stroke="black" stroke-width="6" stroke-linejoin="round" />
+      
+      <!-- Rebord supérieur du flacon -->
+      <line x1="42" y1="23" x2="58" y2="23" stroke="black" stroke-width="6" stroke-linecap="round" />
+      
+      <!-- Lignes de graduation du laboratoire (en blanc pour rester pleines/bleues dans le trou) -->
+      <path d="M 35 49 L 40 49 M 37 44 L 42 44 M 39 39 L 44 39" 
+            fill="none" stroke="white" stroke-width="2" stroke-linecap="round" />
+      
+      <!-- Bulles d'effervescence (en blanc pour rester pleines/bleues) -->
+      <circle cx="46" cy="51" r="2.5" fill="white" />
+      <circle cx="54" cy="45" r="1.5" fill="white" />
+      <circle cx="51" cy="53" r="2" fill="white" />
+    </mask>
+  </defs>
+
+  <!-- Arrière-plan blanc tel que demandé -->
+  <rect width="100" height="100" fill="#ffffff" />
+
+  <!-- Forme du point de localisation (Map Pin) Bleu Montréal -->
+  <!-- La découpe du flacon laisse un contour très épais et lisible -->
+  <path d="M 50 95 L 23 62.3 A 35 35 0 1 1 77 62.3 Z" 
+        fill="#0055A4" mask="url(#hollow-flask)" />
+</svg>
