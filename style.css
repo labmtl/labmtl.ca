@@ -155,6 +155,17 @@ nav {
   max-width: 600px;
 }
 
+.hero-content p a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity 0.2s;
+}
+
+.hero-content p a:hover {
+  opacity: 0.8;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
